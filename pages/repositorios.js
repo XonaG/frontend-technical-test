@@ -1,11 +1,20 @@
 import Contenedor from '../components/Contenedor'
+import { connect } from 'react-redux';
+import { getRepositories } from '../redux/actions/appActions'
 
-const Repositorios = () => {
+const Repositorios = (props) => {
+    const { user, getRepositories } = props;
     return (
         <Contenedor>
-            <h1>Repositorios</h1>
+            <input type="text" onKeyUp={(event) => getRepositories(event)} />
         </Contenedor>
     )
 }
 
-export default Repositorios
+const mapStateToProps = state => ({app: state})
+
+const mapDispatchToProps = {
+    getRepositories: getRepositories
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Repositorios)

@@ -1,7 +1,6 @@
 import Contenedor from '../components/Contenedor'
 import { connect } from 'react-redux';
 import { getUsers } from '../redux/actions/appActions'
-import { useState } from 'react';
 
 const Usuarios = (props) => {
     const { user, getUsers } = props;

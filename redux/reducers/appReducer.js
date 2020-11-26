@@ -1,17 +1,15 @@
-import { GET_USERS_BY_DATA, GET_REPOSITORIES_BY_DATA } from '../actions/appActions';
+import { GET_USERS_BY_DATA, GET_REPOSITORIES_BY_DATA, SUCCESS_GET_USERS, SUCCESS_GET_REPOSITORIES} from '../actions/appActions';
 
-const appReducer = (state = {data: {
-    name: "guest"
-}}, action) => {
+const appReducer = (state = {usuarios: [], repositorios: []}, action) => {
     switch (action.type) {
         case GET_USERS_BY_DATA:
-            return {...state, data: {
-                name: action.payload
-            }};
+            return {...state};
         case GET_REPOSITORIES_BY_DATA:
-            return {...state, data: {
-                name: action.payload
-            }};
+            return {...state};
+        case SUCCESS_GET_USERS:
+            return {...state, usuarios: action.results};
+        case SUCCESS_GET_REPOSITORIES:
+            return {...state, repositorios: action.results};
         default:
             return {...state};
     }
