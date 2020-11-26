@@ -1,25 +1,32 @@
 import Link from 'next/link'
+import Logo from '../public/logo.svg'
 
 
 const Navegacion = () => {
     return (
-        <ul>
-            <li>
+        <nav className="level menu">
+            <p className="level-item has-text-centered">
                 <Link href="/">
-                    <a>Index</a>
+                    <a className="link is-info">Inicio</a>
                 </Link>
-            </li>
-            <li>
+            </p>
+            <p className="level-item has-text-centered">
                 <Link href="/repositorios">
-                    <a>Repositorios</a>
+                <a className="link is-info">Repositorios</a>
                 </Link>
-            </li>
-            <li>
+            </p>
+            <p className="level-item has-text-centered">
+                <Logo className="logo"/>
+            </p>
+            <p className="level-item has-text-centered">
                 <Link href="/usuarios">
-                    <a>Usuarios</a>
+                    <a className="link is-info">Usuarios</a>
                 </Link>
-            </li>
-        </ul>
+            </p>
+            <p className="level-item has-text-centered">
+                <a className="link is-info">Contact</a>
+            </p>
+        </nav>
     )
 }
 
