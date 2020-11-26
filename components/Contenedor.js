@@ -1,12 +1,19 @@
+import Head from 'next/head'
 import Navegacion from './Navegacion'
+import 'bulma/css/bulma.css'
 
-const Contenedor = (props) => (
-    <div>
-        <Navegacion/>
+const Contenedor = (props) => {
+    return (
         <div>
-            {props.children}
+            <Head>
+                <title>GitSearch</title>
+            </Head>
+            <Navegacion/>
+            <div>
+                {props.children}
+            </div>
         </div>
-    </div>
-)
+    )
+}
 
-export default Contenedor;
+export default (Contenedor);

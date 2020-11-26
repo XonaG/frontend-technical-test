@@ -1,5 +1,6 @@
 import Contenedor from '../components/Contenedor'
-
+import { connect } from 'react-redux'
+import { getUsers } from '../redux/actions/appActions'
 const Index = () => {
     return (
         <Contenedor>
@@ -8,4 +9,10 @@ const Index = () => {
     )
 }
 
-export default Index
+const mapStateToProps = state => ({app: state.data})
+
+const mapDispatchToProps = dispatch => ({
+    getUsers: getUsers
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Index)
