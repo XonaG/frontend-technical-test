@@ -1,5 +1,6 @@
 import { GET_USERS_BY_DATA, GET_REPOSITORIES_BY_DATA, SUCCESS_GET_USERS, SUCCESS_GET_REPOSITORIES} from '../actions/appActions';
 
+// CREAMOS EL REDUCER DE LA APLICACION Y LE ASIGNAMOS SU ACCION
 const appReducer = (state = {usuarios: [], repositorios: [], loading: false}, action) => {
     switch (action.type) {
         case GET_USERS_BY_DATA:

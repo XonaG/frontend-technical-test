@@ -9,9 +9,11 @@ import '../assets/repositorio.scss'
 import '../assets/buscador.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bulma/css/bulma.css'
+
+// COMPONENTE RAIZ ENCARGADO DE DARLE FUNCIONALIDAD A TODO EL ENTORNO DE NEXTJS
 class MyApp extends App {
   static async getInitialProps({Component, ctx}) {
-
+    // SE OBTIENEN LAS PROPIEDADES DEL STORE
     return {
       appProps: {
         ...(Component.getInitialProps ? await 
@@ -22,6 +24,7 @@ class MyApp extends App {
   render() {
     const { Component, appProps } = this.props;
     return (
+      // SE ENVUELVE TODA LA APLICACION EN UN PROVIDER
       <Provider store={store}>
           <Component {...appProps} />
       </Provider>

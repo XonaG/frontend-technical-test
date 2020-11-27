@@ -1,8 +1,9 @@
 import { faLock } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-
+// COMPONENTE DE RESULTADO DE REPOSITORIO
 const RepositoryContent = (props) => {
+    // RECIBE COMO DATOS DE ENTRADA UN ICONO, NOMBRE, ID, LEGUAJE
     const repositorioPrivado = () => (
         props.privado ? <div>
             <FontAwesomeIcon className="iconCard" icon={faLock} />
@@ -10,6 +11,7 @@ const RepositoryContent = (props) => {
     )
     return (
         <div className="card cardRepository">
+            {/* CANDADO QUE SE IMPRIME SI EL REPOSITORIO ES PRIVADO */}
             {repositorioPrivado()}
             <FontAwesomeIcon className="iconCard" icon={props.icono} />
             <div className="card-body">

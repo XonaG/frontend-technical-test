@@ -6,6 +6,7 @@ import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 import Carousel from 'react-bootstrap/Carousel'
 import Image from 'next/image'
 import Card from '../components/Card'
+// COMPONENTE INDEX
 const Index = () => {
     return (
         <Contenedor>
@@ -54,10 +55,4 @@ const Index = () => {
     )
 }
 
-const mapStateToProps = state => ({app: state.data})
-
-const mapDispatchToProps = dispatch => ({
-    getUsers: getUsers
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Index)
+export default (Index)

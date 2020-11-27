@@ -1,8 +1,10 @@
+// CARTA PARA INDEX
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const Card = (props) => {
+    // RECIBE PARAMETROS POR ICONO TITULO SUBTITULO DESCRIPCION Y LINK
     console.log(props)
     return (
         <div className="card cardContainer">
@@ -18,6 +20,7 @@ const Card = (props) => {
                     {props.descripcion}
                 </div>
             </div>
+            {/* SE USA LINK DE NEXTJS PARA EL CAMBIO DE PAGINA */}
             <Link href={props.link}>
                 <button className="button is-fullwidth is-link botonCard">Ir</button>
             </Link>

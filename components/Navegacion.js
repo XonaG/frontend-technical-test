@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import Logo from '../public/logo.svg'
 
+// TODA LA FUNCIONALIDAD DEL MENU
 
 const Navegacion = () => {
     return (
         <nav className="level menu">
             <p className="level-item has-text-centered">
+                {/* UTILIZAMOS LINK PARA EL RUTEO */}
                 <Link href="/">
                     <a className="link is-info">Inicio</a>
                 </Link>

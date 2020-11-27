@@ -1,12 +1,18 @@
+// COMPONENTES
 import Contenedor from '../components/Contenedor'
 import Buscador from '../components/Buscador'
+import RepositoryContent from '../components/RepositoryContent'
+// MODULOS
 import { connect } from 'react-redux';
 import { getRepositories } from '../redux/actions/appActions'
-import RepositoryContent from '../components/RepositoryContent'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
+
+
+// PAGINA REPOSITORIO
 
 const Repositorios = (props) => {
     const { app, getRepositories } = props;
+    // SE UTILIZA COMPONENTE REPOSITORIO PARA LOS RESULTADOS DE LA BUSQUEDA Y SE MAPEA
     const repositorios = app.app.repositorios.map((repositorio) => 
         <RepositoryContent 
         icono={faGithubAlt}
@@ -16,6 +22,8 @@ const Repositorios = (props) => {
         url={repositorio.html_url}
         privado={repositorio.private} className="column is-12" />
     )
+
+    // SE UTILIZA BUSCADOR PARA CONSULTA DE DATOS
 
     return (
         <Contenedor>
@@ -33,6 +41,8 @@ const Repositorios = (props) => {
         </Contenedor>
     )
 }
+
+// USAMOS LOS ACTIONS PARA PODER INTERACTUAR CON REDUX Y SUS ACCIONES DE DE REPOSITORIO
 
 const mapStateToProps = state => ({app: state})
 

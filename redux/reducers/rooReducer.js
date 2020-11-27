@@ -1,3 +1,4 @@
+// CREAMOS UN ROOTREDUCER PARA VARIOS REDUCERS
 import appReducer from './appReducer'
 import { combineReducers } from 'redux'
 
