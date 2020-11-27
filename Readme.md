@@ -12,7 +12,7 @@ Estas instrucciones te permitirán obtener una copia del proyecto en funcionamie
 
 ## Muy importante ☢
 
-Si al realizar la busqueda deja de arrojar resultados, debe esperar a que la API de git bloquee las consultas, esto tarda aproximadamente 1 minuto.
+Si al realizar la busqueda deja de arrojar resultados, debe esperar a que la API de git no bloquee las consultas, esto tarda aproximadamente 1 minuto.
 
 ## Instalación 🔧
 
