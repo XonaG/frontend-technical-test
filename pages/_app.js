@@ -5,7 +5,10 @@ import store from '../redux/store'
 import '../assets/index.scss'
 import '../assets/nav.scss'
 import '../assets/card.scss'
+import '../assets/repositorio.scss'
+import '../assets/buscador.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bulma/css/bulma.css'
 class MyApp extends App {
   static async getInitialProps({Component, ctx}) {
 

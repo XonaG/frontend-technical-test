@@ -6,7 +6,6 @@ import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 import Carousel from 'react-bootstrap/Carousel'
 import Image from 'next/image'
 import Card from '../components/Card'
-// import img1 from '../public/code.jpg'
 const Index = () => {
     return (
         <Contenedor>
@@ -52,16 +51,6 @@ const Index = () => {
                 </div>
             </div>
         </Contenedor>
-
-        // <div className="principalContainer">
-        //     {/* <h1>Index</h1>
-        //     <FontAwesomeIcon icon={faBell} /> */}
-        //     <div className="columns is-mobile">
-        //         <div className="column logoContainter">
-        //             <Logo className="logo" />
-        //         </div>
-        //     </div>
-        // </div>
     )
 }
 
